@@ -8,8 +8,10 @@ int main()
 {
 
 	char ccc[100] = "hello";
-	aa(ccc);
+	//aa(ccc);
 
+	//bb0(ccc);
+	bb1(ccc);
 
         return 0;
 }
