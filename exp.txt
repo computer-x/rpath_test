@@ -1,0 +1,11 @@
+echo $LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=
+
+export LD_LIBRARY_PATH=./aa
+
+export LD_LIBRARY_PATH=./bb
+
+export LD_LIBRARY_PATH=./bb:$LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=./aa:$LD_LIBRARY_PATH

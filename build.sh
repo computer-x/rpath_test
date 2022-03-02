@@ -28,4 +28,14 @@
 # passed when compiling,
 # alse passed when running,
 #gcc main.c -o test -L ./bb -Wl,-rpath ./bb -lbb
-gcc main.c -o test -L ./bb -Wl,-rpath /home/chenxu1/some_test/rpath_test/bb -lbb
+#gcc main.c -o test -L ./bb -Wl,-rpath /home/chenxu1/some_test/rpath_test/bb -lbb
+
+
+
+################### commit 3 #####################
+# wrong, return "libaa.so, needed by ./bb/libbb.so, not found"
+#gcc main.c -o test -L ./bb -lbb
+
+# passed when compiling,
+# need set LD_LIBRARY_PATH of bb & aa when running.
+gcc main.c -o test -L ./bb -lbb -Wl,-rpath-link /home/chenxu1/some_test/rpath_test/aa
